@@ -17,7 +17,6 @@
       <action method="removeItem"><type>skin_css</type><name>css/widgets.css</name></action>
 
     </reference>
-
     <!-- Set the default page layout with main left column and right sidebar -->
     <reference name="root">
       <action method="setTemplate">
@@ -25,7 +24,14 @@
       </action>
       <action method="setIsHandle">
         <applied>1</applied>
-      </action>    
+      </action>
+    </reference>
+
+    <reference name="footer_links">
+      <action method="removeLinkByUrl"><url>http://dev.sbw.co/catalogsearch/term/popular/</url></action>
+      <action method="removeLinkByUrl"><url>http://dev.devstore.summitbodyworks.com/catalogsearch/term/popular/</url></action>
+      <action method="removeLinkByUrl"><url>http://www.summitbodyworks.com/catalogsearch/term/popular/</url></action>
+      <action method="removeLinkByUrl"><url helper="catalogsearch/getAdvancedSearchUrl" /></action>
     </reference>
 
     <!-- Remove callouts, which are not being used -->
@@ -46,19 +52,23 @@
 
     </reference>
 
-  </default>
-
-
-  <!-- Right Sidebar: My Cart, Recently Viewed Products, Compare Products -->
-  <default>
     <reference name="right">
       <action method="unsetChild"><name>right.reports.product.viewed</name></action>
       <block type="reports/product_viewed" after="cart_sidebar" name="right.reports.product.viewed" template="reports/product_viewed.phtml"/>
       <action method="unsetChild"><name>catalog.compare.sidebar</name></action>
       <block type="core/template" after="product_viewed" name="catalog.compare.sidebar" template="catalog/product/compare/sidebar.phtml"/>
+      <remove name="right.poll" />
     </reference>
   </default>
 
+  <contacts_index_index>
+    <reference name="right">
+      <remove name="catalog.compare.sidebar" />
+      <remove name="cart_sidebar" />
+      <remove name="right.reports.product.viewed" />
+      <block type="core/template" name="contacts.address" template="contacts/address.phtml" />
+    </reference>
+  </contacts_index_index>
 
   <!-- Move subcategory navigation to top of right sidebar on product category pages -->
   <catalog_category_default>
