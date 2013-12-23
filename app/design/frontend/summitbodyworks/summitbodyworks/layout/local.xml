@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+
+<layout>
+
+  <default>
+
+    <reference name="head">
+
+      <action method="addCss">
+        <stylesheet>css/reset.css</stylesheet>
+      </action>
+      <action method="addCss">
+        <stylesheet>css/boxes.css</stylesheet>
+      </action>
+      <action method="addCss">
+        <stylesheet>css/menu.css</stylesheet>
+      </action>
+      <action method="addCss">
+        <stylesheet>css/clears.css</stylesheet>
+      </action>
+      <action method="addCss">
+        <stylesheet>css/local.css</stylesheet>
+      </action>
+
+      <action method="removeItem"><type>skin_css</type><name>css/local.css</name></action>
+      <action method="addItem"><type>skin_css</type><name>css/local.css</name></action>
+
+      <!--<block type="core/text" name="google.cdn.jquery">
+        <action method="setText">
+          <text><![CDATA[<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script>window.jQuery||document.write('<script src="/path/to/your/jquery.js">\x3c/script>');</script><script>jQuery.noConflict();</script>]]></text>
+        </action>
+      </block>-->
+
+      <!--<action method="addJs">
+        <script>js/local.js</script>
+      </action>-->
+
+    </reference>
+
+    <reference name="root">
+
+      <action method="setTemplate">
+        <template>page/2columns-right.phtml</template>
+      </action>
+
+      <action method="setIsHandle">
+        <applied>1</applied>
+      </action>    
+
+    </reference>
+
+    <remove name="left.permanent.callout"/>
+    <remove name="right.permanent.callout"/>
+
+    <reference name="top.links">
+
+      <action method="addLink" translate="label title" module="customer"><label>Return to Summit Bodyworks</label><a>http://www.summitbodyworks.com/</a><title>Return to Summit Bodyworks</title><prepare/><urlParams/><position>1</position></action>
+
+      <action method="addLink" translate="label title" module="customer"><label>Contact Us</label><a>contacts/</a><title>Contact Us</title><prepare/><urlParams/><position>100</position></action>
+
+    </reference>
+
+  </default>
+
+
+	<catalog_category_default>
+    <reference name="left">
+      <action method="unsetChild"><name>catalog.leftnav</name></action>
+    </reference>
+    <reference name="right">
+      <block type="catalog/navigation" name="catalog.leftnav" before="cart_sidebar" template="catalog/navigation/left.phtml"/>
+    </reference>
+  </catalog_category_default>
+  
+
+  <catalogsearch_result_index>
+    <reference name="root">
+      <action method="setTemplate"><template>page/2columns-right.phtml</template></action>
+    </reference>
+    <reference name="left">
+      <!--<remove name="catalogsearch.leftnav" />-->
+      <action method="unsetChild"><name>catalogsearch.leftnav</name></action>
+    </reference>
+    <reference name="right">
+      <!--<block type="catalogsearch/layer" name="catalogsearch.leftnav" before="cart_sidebar" template="catalog/layer/view.phtml"/>-->
+      <action method="insert"><child>catalogsearch.leftnav</child></action>
+    </reference>
+  </catalogsearch_result_index>
+  
+
+</layout>

@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+
+<layout>
+
+  <default>
+
+    <reference name="head">
+
+      <!--<action method="addCss">
+        <stylesheet>css/reset.css</stylesheet>
+      </action>-->
+
+      <action method="removeItem"><type>skin_css</type><name>css/local.css</name></action>
+      <action method="addItem"><type>skin_css</type><name>css/local.css</name></action>
+
+      <!-- Remove reference to widgets.css, which doesn't exist in base theme, causing a 404 error -->
+      <action method="removeItem"><type>skin_css</type><name>css/widgets.css</name></action>
+
+    </reference>
+
+    <!-- Set the default page layout with main left column and right sidebar -->
+    <reference name="root">
+      <action method="setTemplate">
+        <template>page/2columns-right.phtml</template>
+      </action>
+      <action method="setIsHandle">
+        <applied>1</applied>
+      </action>    
+    </reference>
+
+    <!-- Remove callouts, which are not being used -->
+    <remove name="left.permanent.callout"/>
+    <remove name="right.permanent.callout"/>
+
+    <!-- Remove "Orders & Returns" link from footer menu -->
+    <remove name="return_link"/>
+
+    <!-- Adjust the quick links at the top -->
+    <reference name="top.links">
+
+      <!-- Add "Return to Summit Bodyworks" link at beginning of quick links menu -->
+      <action method="addLink" translate="label title" module="customer"><label>Return to Summit Bodyworks</label><a>http://www.summitbodyworks.com/</a><title>Return to Summit Bodyworks</title><prepare/><urlParams/><position>1</position></action>
+
+      <!-- Add "Contact Us" link to quick links menu (and start from base URL instead of current URL) -->
+      <action method="addLink" translate="label title" module="customer"><label>Contact Us</label><a>contacts/</a><title>Contact Us</title><prepare>true</prepare><urlParams helper="core/url/getHomeUrl"/><position>100</position></action>
+
+    </reference>
+
+  </default>
+
+
+  <!-- Right Sidebar: My Cart, Recently Viewed Products, Compare Products -->
+  <default>
+    <reference name="right">
+      <action method="unsetChild"><name>right.reports.product.viewed</name></action>
+      <block type="reports/product_viewed" after="cart_sidebar" name="right.reports.product.viewed" template="reports/product_viewed.phtml"/>
+      <action method="unsetChild"><name>catalog.compare.sidebar</name></action>
+      <block type="core/template" after="product_viewed" name="catalog.compare.sidebar" template="catalog/product/compare/sidebar.phtml"/>
+    </reference>
+  </default>
+
+
+  <!-- Move subcategory navigation to top of right sidebar on product category pages -->
+  <catalog_category_default>
+    <reference name="left">
+      <action method="unsetChild"><name>catalog.leftnav</name></action>
+    </reference>
+    <reference name="right">
+      <block type="catalog/navigation" name="catalog.leftnav" before="-" template="catalog/navigation/left.phtml"/>
+    </reference>
+  </catalog_category_default>
+  
+
+  <!-- Move subcategory navigation to top of right sidebar on search results page -->
+  <catalogsearch_result_index>
+    <reference name="root">
+      <action method="setTemplate"><template>page/2columns-right.phtml</template></action>
+    </reference>
+    <reference name="left">
+      <action method="unsetChild"><name>catalogsearch.leftnav</name></action>
+    </reference>
+    <reference name="right">
+      <action method="insert"><child>catalogsearch.leftnav</child></action>
+    </reference>
+  </catalogsearch_result_index>
+
+
+  <!-- Add custom static block with Summit Bodyworks address above contact form on Contact Us page -->
+  <contacts_index_index>
+    <reference name="content">
+      <block type="cms/block" name="sbw_address" before="contactForm">
+        <action method="setBlockId"><block_id>sbw_address</block_id></action>  
+      </block>
+    </reference>
+  </contacts_index_index>
+  
+
+</layout>
