@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock '3.6.0'
 
-set :application, "Summit Body Works"
+set :application, "SummitBodyWorks"
 set :repo_url, "git@github.com:commercekitchen/summitbodyworks-magento.git"
 
 set :ssh_options, {
