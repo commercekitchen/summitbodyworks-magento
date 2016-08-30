@@ -1,0 +1,4 @@
+############################################
+## Add additional MIME types
+
+    AddType application/font-woff .woff

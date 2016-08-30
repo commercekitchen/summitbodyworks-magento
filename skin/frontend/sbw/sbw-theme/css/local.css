@@ -1,0 +1,741 @@
+/**************************************************\
+    Font Imports
+\**************************************************/
+
+@import url("//hello.myfonts.net/count/255b99");
+/* @license * MyFonts Webfont Build ID 2448281, 2013-01-13T01:48:19-0500 *  * The fonts listed in this notice are subject to the End User License * Agreement(s) entered into by the website owner. All other parties are  * explicitly restricted from using the Licensed Webfonts(s). *  * You may obtain a valid license at the URLs below. *  * Webfont: Calibri by Ascender Corp. * URL: http://www.myfonts.com/fonts/ascender/calibri/regular/ * Copyright: &#x00A9 2007 Microsoft Corporation. All Rights Reserved. *  *  * License: http://www.myfonts.com/viewlicense?type=web&buildid=2448281 *  * © 2013 Bitstream Inc */
+/* @import must be at top of file, otherwise CSS will not work */
+@font-face {
+  font-family: "Calibri";
+  src: url("../fonts/255B99_0_0.eot");
+  src: url("../fonts/255B99_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/255B99_0_0.woff") format("woff"), url("../fonts/255B99_0_0.ttf") format("truetype"); }
+
+/* @license * MyFonts Webfont Build ID 2408769, 2012-11-12T01:48:34-0500 *  * The fonts listed in this notice are subject to the End User License * Agreement(s) entered into by the website owner. All other parties are  * explicitly restricted from using the Licensed Webfonts(s). *  * You may obtain a valid license at the URLs below. *  * Webfont: DIN Condensed by ParaType * URL: http://www.myfonts.com/fonts/paratype/din-condensed/pt-din-condensed/ * Copyright: Copyright (c) ParaType, Inc., 2005. All rights reserved. * Licensed pageviews: 10,000 *  *  * License: http://www.myfonts.com/viewlicense?type=web&buildid=2408769 *  * © 2012 Bitstream Inc */
+@font-face {
+  font-family: "DINCondensed";
+  src: url("../fonts/24C141_0_0.eot");
+  src: url("../fonts/24C141_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/24C141_0_0.woff") format("woff"), url("../fonts/24C141_0_0.ttf") format("truetype");
+  text-transform: uppercase;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "League Gothic";
+  src: url("../fonts/leaguegothic-regular-webfont.eot");
+  src: url("../fonts/leaguegothic-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/leaguegothic-regular-webfont.woff") format("woff"), url("../fonts/leaguegothic-regular-webfont.ttf") format("truetype"), url("../fonts/leaguegothic-regular-webfont.svg#league_gothicregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+
+
+/**************************************************\
+    General Styles
+\**************************************************/
+
+body {
+    /*background: url(http://www.transwest.com/assets/bkg-browse-gray-158cc8bc8f243e1e0b27ffd1c3ae0584.png);*/
+    background: url("../images/bkg-browse-2506d7473389e995528c78b2c9ef9d93.png");
+    font-family: "Calibri","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    text-shadow: 0 0 1px rgba(0,0,0,0.3);
+    line-height: 20px;
+    color: #333;
+}
+
+.main-container {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #636465;
+    font-size: 14px;
+}
+
+/*.main-container {
+    width: 900px;
+    min-height: 400px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 25px 25px 80px 25px;
+}*/
+
+.main-container, .main {
+    background-color: transparent;
+    background-image: none;
+}
+
+.main {
+    padding-bottom: 50px;
+}
+
+a, a:hover {
+    color: #005580;
+}
+
+
+
+/**************************************************\
+    Menu Style Overrides
+\**************************************************/
+
+#nav a:hover { display:block; line-height:1.3em; text-decoration:none; }
+
+nav li.active a { color:#fff; }
+
+nav a { float:left; padding:5px 12px 6px 8px; color:#a7c6dd; font-weight:bold; }
+
+#nav li.over a, #nav a:hover { color:#fff; }
+
+#nav ul li.active { float:none; margin:0; padding-bottom:1px; background:#eee !important url(../images/nav_divider.gif) repeat-x 0 100%; }
+
+#nav li.over > ul li.over > ul { left:100px; }
+
+#nav ul li a { background:#eee; }
+
+#nav ul li a:hover { background:#ddd; }
+
+#nav ul ul { top:5px; }
+
+/*.nav-featured-products {
+    display: none;
+    visibility: hidden;
+}*/
+
+
+
+/**************************************************\
+    Header
+\**************************************************/
+
+.header-container {
+    background: #343434;
+    background: -moz-linear-gradient(top, #343434 0%, #171717 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#343434), color-stop(100%,#171717));
+    background: -webkit-linear-gradient(top, #343434 0%, #171717 100%);
+    background: -o-linear-gradient(top, #343434 0%, #171717 100%);
+    background: -ms-linear-gradient(top, #343434 0%, #171717 100%);
+    background: linear-gradient(to bottom, #343434 0%, #171717 100%);
+    background-repeat: repeat-x;
+    border: none;
+    zoom: 1;
+    margin-bottom: 0;
+}
+
+.nav-container {
+    background: #171717;
+    background: -moz-linear-gradient(top, #171717 0%, #131313 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#171717), color-stop(100%,#131313));
+    background: -webkit-linear-gradient(top, #171717 0%, #131313 100%);
+    background: -o-linear-gradient(top, #171717 0%, #131313 100%);
+    background: -ms-linear-gradient(top, #171717 0%, #131313 100%);
+    background: linear-gradient(to bottom, #171717 0%, #131313 100%);
+    background-repeat: repeat-x;
+    zoom: 1;
+    margin-bottom: 0;
+    box-shadow: 0 0 21px 10px rgba(0,0,0,0.25);
+}
+
+.header #logo, .header .logo {
+    margin: 0;
+    /*float: none;*/
+}
+
+.header #logo strong, .header .logo strong {
+    display: none;
+}
+
+.header #logo img, .header .logo img {
+    width: 240px;
+    margin: 3px 0 10px 12px;
+}
+
+h1#logo {
+    float: none;
+    margin: 0;
+}
+
+.navbar-fixed-top, nav#main-navbar {
+    top: 0;
+}
+
+.navbar-fixed-top, nav#main-navbar, .navbar-fixed-bottom {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    margin-bottom: 0;
+}
+
+.navbar, nav#main-navbar {
+    overflow: visible;
+    margin-bottom: 20px;
+}
+
+nav {
+    display: block;
+}
+
+.header-top-container {
+    background: none;
+    border: none;
+    height: 100px;
+}
+
+.header-top {
+    padding-bottom: 0;
+}
+
+.header .form-search {
+    background: none;
+    top: 26px;
+    right: -30px;
+}
+
+.header .form-search label {
+    display: none;
+}
+
+.header .form-search button.button {
+    width: 50px;
+    height: 21px;
+    cursor: pointer;
+}
+
+input.input-text {
+    width: 212px;
+}
+
+.header .quick-access {
+    width: 580px;
+    position: absolute;
+    top: 8px;
+    right: 50px;
+    padding: 0;
+}
+.header .quick-access .links a {
+    color: #777676;
+    font-size: 12px;
+}
+.header .quick-access .links a:hover {
+    color: #1e7ec8;
+    font-size: 12px;
+}
+
+ul#nav li {
+    z-index: 1;
+}
+
+ul#nav li>a {
+    font-family: DINCondensed,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    text-shadow: 0 0 1px rgba(0,0,0,0.3);
+    text-shadow: none;
+    color: #cbcbcb;
+    font-size: 16px;
+}
+ul#nav li>a:hover {
+    color: #fff;
+}
+ul#nav li.active>a {
+    color: #fff;
+}
+
+#nav a {
+    padding-right: 16px;
+}
+#nav a, #nav a:hover {
+    /*line-height: 16px;*/
+}
+
+#nav ul span, #nav ul li.last li span {
+    padding: 8px 15px 5px 15px;
+}
+
+
+
+/**************************************************\
+    Product Listings
+\**************************************************/
+
+.col2-right-layout .col-main {
+    float: left;
+    width: 685px;
+    margin-bottom: 80px;
+}
+
+.breadcrumbs {
+    font-size: 13px;
+}
+
+.category-products .products-grid .item, .category-products .products-list .item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+}
+
+.col2-right-layout ul.products-grid {
+    background: none;
+    border-bottom: none;
+    width: auto;
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.col2-right-layout ol.products-list {
+    padding-left: 0;
+}
+
+.products-grid li.item {
+    width: 134px;
+    min-height: 350px;
+    margin-right: 2px;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.products-grid li.item.last {
+    margin-right: 0;
+}
+
+.products-grid .price-box {
+    margin: 10px 0;
+}
+
+.products-grid .actions {
+    position: inherit;
+}
+
+.col2-right-layout .products-grid li.item {
+    width: 199px;
+    margin-right: 10px;
+}
+
+.col2-right-layout .products-grid li.item.last {
+    margin-right: 0;
+}
+
+.col2-right-layout .products-grid li.item .product-image {
+    width: 195px;
+}
+.col2-right-layout .products-list li.item .product-image {
+    width: 249px;
+}
+
+.products-grid .product-image, .products-list .product-image {
+    display: block;
+    padding: 1px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    /*border: 1px dashed blue;*/
+}
+
+.products-grid .product-image {
+    margin-bottom: 12px;
+}
+
+ol.products-list {
+    list-style-type: none;
+}
+
+.products-list .product-shop {
+    margin-left: 320px;
+}
+
+.products-list .price-box {
+    float: none;
+}
+
+.products-grid .item .product-name, .products-list .item .product-name {
+    font-size: 24px;
+    color: #183042;
+    font-family: "League Gothic","Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    text-shadow: 0 0 1px rgba(0,0,0,0.3);
+    letter-spacing: 0.03em;
+    line-height: 1em;
+    margin-bottom: 15px;
+}
+
+.category-title h1, .page-title h1, .product-view .product-shop .product-name h1, .col-main .std h3 {
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #183042;
+    font-family: "League Gothic","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: normal;
+}
+
+.std ul {
+    list-style: none;
+    padding-left: 0;
+}
+.std ul ul {
+    list-style-type: none;
+}
+
+ul.add-to-links {
+    font-size: 13px;
+    line-height: 14px;
+}
+.products-grid ul.add-to-links, .products-list ul.add-to-links {
+    padding-top: 10px;
+}
+
+
+
+/**************************************************\
+    Product Page
+\**************************************************/
+
+.product-view {
+    border: 1px solid #c4c6c8;
+    margin-top: 0;
+}
+
+.product-view .product-name {
+    font-size: 24px;
+    color: #183042;
+    font-family: "League Gothic","Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    text-shadow: 0 0 1px rgba(0,0,0,0.3);
+    letter-spacing: 0.03em;
+    line-height: 1em;
+}
+
+.product-collateral {
+    background: url() repeat-x #f8f7f5;
+}
+.product-collateral h2 {
+    border-bottom: 1px solid #ccc;
+}
+
+.call-to-order {
+    background: #faebe7;
+    border: 1px solid #f16048;
+    color: #df280a;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 8px;
+}
+
+
+
+/**************************************************\
+    Footer
+\**************************************************/
+
+.footer-container {
+    padding-top: 3em;
+    background: url(../images/sbw_footer-top-border-gradient.png) repeat-x,url(../images/sbw_footer-bkg.png);
+    background-color: #2a2a2c;
+    border-top: none;
+    clear: both;
+}
+
+.footer {
+    background-color: transparent;
+    font-family: "Calibri","Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-shadow: 0 0 1px rgba(0,0,0,0.3);
+    text-align: left;
+}
+
+/*.footer .container {
+    text-align: left;
+}
+*/
+
+.footer img#footer-logo {
+    width: 176px;
+}
+
+.footer .vcard a {
+    color: #1e7ec8;
+}
+.footer .vcard a:hover {
+    color: #005580;
+    text-decoration: underline;
+}
+
+
+.footer h3 {
+    font-size: 2em;
+    color: #777676;
+    margin-bottom: .4em;
+    line-height: 1.3em;
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+    font-family: "League Gothic","Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    text-shadow: 0 0 1px rgba(0,0,0,0.3);
+    letter-spacing: 0.03em;
+    line-height: 1em;
+    margin: 10px 0;
+    text-rendering: optimizelegibility;
+}
+
+.footer p {
+    color: #636465;
+    margin: 0 0 10px;
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-size: 1.25em;
+    font-family: "Calibri","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    text-shadow: 0 0 1px rgba(0,0,0,0.3);
+    line-height: 20px;
+}
+
+.footer dl {
+    display: block;
+    margin-bottom: 19px;
+    float: left;
+    width: 100%;
+}
+
+.footer dt, .footer dd {
+    line-height: 20px;
+}
+
+.footer dt {
+    color: #cccccc;
+}
+
+.footer dl dt {
+    float: left;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: normal;
+    /*font-size: 1.2em;*/
+    font-size: 14px;
+    display: block;
+}
+
+.footer dd.hq {
+    clear: both;
+}
+
+.footer dl dd {
+    margin: 0;
+    padding: 0;
+    display: block;
+    float: left;
+    color: #636465;
+    font-size: 14px; 
+}
+
+.footer dl.aligned dt {
+    clear: both;
+    width: 42%;
+}
+
+#footer-content {
+    margin-top: 45px;
+}
+
+
+#footer-mission {
+    display: block;
+    float: left;
+    width: 400px;
+    margin: 0 40px 0 0;
+    text-align: left;
+    /*border: 1px dashed orange;*/
+}
+
+#footer-vcard {
+    display: block;
+    float: left;
+    width: 200px;
+    margin: 0 40px 0 0;
+    text-align: left;
+    /*border: 1px dashed orange;*/
+}
+
+#footer-nav {
+    display: block;
+    float: left;
+    width: 200px;
+    margin: 0;
+    text-align: left;
+    /*border: 1px dashed orange;*/
+}
+
+
+#footer-nav ul {
+    font-family: "DINCondensed","Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    text-shadow: 0 0 1px rgba(0,0,0,0.3);
+}
+#footer-nav ul li {
+    display: block;
+    color: #777676;
+    font-size: 1.4em;
+    background: none;
+    padding-left: 0;
+}
+#footer-nav ul li a {
+    color: #777676;
+    font-weight: normal;
+    text-decoration: none;
+}
+#footer-nav ul li a:hover {
+    color: #1e7ec8;
+}
+
+
+
+/**************************************************\
+    Reset Orange Accent Colors to Red / Gray
+\**************************************************/
+
+.block .block-title strong {
+    color: #cb0000;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.box-collateral h2 {
+    color: #cb0000;
+}
+
+.block-cart .subtotal {
+    background: #fbdbc9;
+}
+
+.cart .discount h2, .cart .shipping h2 {
+    color: #cb0000;
+}
+
+/*button.btn-cart span, .block-cart button.button span, .account-login button.button span, .opc button.button span {
+    background: #eb1617;
+    color: #fff;
+    padding: 1px 8px;
+    border: 1px solid #cb0000;
+    cursor: pointer;
+}
+.block-cart button.button span span, .account-login button.button span span, .opc button.button span span {
+    padding: 0;
+    border: none;
+}*/
+
+button.button span {
+    background: #eb1617;
+    color: #fff;
+    padding: 1px 8px;
+    border: 1px solid #cb0000;
+    cursor: pointer;    
+}
+button.button span span {
+    padding: 0;
+    border: none;  
+}
+
+button.btn-checkout span {
+    background: url(../images/btn_checkout.gif) 0 0 no-repeat;
+    border: none;
+    padding: 0 0 0 9px;
+}
+button.btn-checkout span span {
+    padding: 0 9px 0 0;
+}
+
+.price-box .price, .regular-price, .regular-price .price, .price-label, .special-price .price-label {
+    color: #cb0000;
+}
+
+.link-wishlist {
+    color: #cb0000 !important;
+}
+
+.account-login .content {
+    background-color: none;
+}
+.account-login .content h2 {
+    color: #cb0000;
+}
+
+.opc .step {
+    background-color: #f8f8f8;
+}
+
+.opc .active .step-title .number {
+    background: #f14200;
+    border-color: #f14900;
+}
+.opc .step-title h2, .opc .active .step-title h2 {
+    color: #cb0000;
+}
+
+.account-login .content {
+    background-color: #f4f4f4;
+}
+
+.fieldset {
+    background: #f8f8f8;
+}
+.fieldset .legend {
+    background: #f6f6f6;
+    border: 1px solid #cb0000;
+    color: #cb0000;
+}
+
+.call {
+    margin-bottom: 12px;
+}
+
+#return-policy {
+    position: fixed;
+    top: 10%;
+    left: 30%;
+    width: 40%;
+    max-height: 600px;
+    overflow: auto;
+    z-index: 999999;
+    background: #efefef;
+    padding: 2em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 0 40px 0px #333;
+    -moz-box-shadow: 0 0 40px 0px #333;
+    -o-box-shadow: 0 0 40px 0px #333;
+    box-shadow: 0 0 40px 0px #333;
+}
+
+#return-policy .return-policy-header {
+    text-align: right;
+}
+
+#return-policy-overlay {
+    position: fixed;
+    cursor: pointer;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #333;
+    opacity: 0.85;
+    filter:Alpha(opacity=85);
+}

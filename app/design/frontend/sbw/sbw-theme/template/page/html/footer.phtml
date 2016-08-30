@@ -1,0 +1,59 @@
+<div class="footer-container">
+
+	<div class="footer">
+
+		<img id="footer-logo" alt="Summit Bodyworks" src="<?php echo Mage::getDesign()->getSkinUrl('images/summit-logo-inverted.png'); ?>">
+
+		<div id="footer-content">
+
+			<div id="footer-mission">
+				<h3>Summit Bodyworks Mission</h3>
+				<p>As the nation's premier builder of specialty vehicles across a wide range of industries, Summit Bodyworks' goal is to exceed your expectations in everything we do. Each custom vehicle we build is unsurpassed in quality and functionality only matched by the service and support you'll receive from us every step of the way.</p>
+				<h3>Going way beyond the extra mile</h3>
+			</div>
+
+			<div id="footer-vcard" class="vcard">
+				<dl class="aligned">
+					<dt>Toll-Free:</dt>
+					<dd class="tel">866-514-8184</dd>
+					<dt>Phone:</dt>
+					<dd class="tel">303-301-7550</dd>
+					<dt>Fax:</dt>
+					<dd class="tel">303-288-2847</dd>
+				</dl>
+				<dl>
+					<dt class="hq">Headquarters:</dt>
+					<dd class="hq">
+						<span class="street-address">7740 Dahlia St.</span>
+						<br>
+						<span class="locality">Commerce City,</span>
+						<span class="region">CO</span>
+						<br>
+						<span class="postal-code">80022</span>
+						<span class="country-name">United States</span>
+						<br>
+						<a href="https://www.google.com/maps/place/7740+Dahlia+St,+Commerce+City,+CO+80022/@39.8372572,-104.9305922,17z/data=!3m1!4b1!4m2!3m1!1s0x876c70b1c93723a3:0x73076c36c773cc99">map</a>
+					</dd>
+				</dl>
+			</div>
+
+			<div id="footer-nav">
+				<?php echo $this->getChildHtml() ?>
+			</div>
+
+			<div style="clear:both"></div>
+
+		</div>
+
+		<p>&copy; Transwest <?php echo date('Y') ?></p>
+		<span id="siteseal"><script type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=U2x4TtVCtpS6DfbRNrSmpZzxcLGdy48sl8T0VnDU8d55EwOQHd8ZU"></script></span>
+	</div>
+
+</div>
+<div id="return-policy" style="display: none;">
+	<div class="return-policy-header">
+		<a href="javascript:hideReturnPolicy();"><?php echo $this->__('Close') ?></a>
+	</div>
+    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('return_policy')->toHtml(); ?>
+</div>
+<div id="return-policy-overlay" style="display: none;"></div>
